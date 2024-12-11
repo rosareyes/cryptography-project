@@ -1,0 +1,46 @@
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir               = ./certificates/AC1 # Directory for the CA files
+certs             = $dir/certs         # Where the issued certs will be kept
+crl_dir           = $dir/crl           # Where the CRLs will be kept
+database          = $dir/index.txt     # Database file
+new_certs_dir     = $dir/newcerts      # Default place for new certs
+certificate       = $dir/cert.pem   # The CA certificate
+serial            = $dir/serial        # The current serial number
+private_key       = $dir/private_key.pem # The CA private key
+RANDFILE          = $dir/private/.rand # Private random number file
+
+# Default values for certificates
+default_days      = 365
+default_md        = sha256
+preserve          = no
+policy            = policy_match
+
+[ policy_match ]
+countryName             = match
+stateOrProvinceName     = match
+organizationName        = match
+organizationalUnitName  = optional
+commonName              = supplied
+emailAddress            = optional
+
+[ req ]
+distinguished_name  = req_distinguished_name
+x509_extensions     = v3_ca
+prompt              = no
+
+[ req_distinguished_name ]
+C  = ES
+ST = Madrid
+L  = Madrid
+O  = My Organization
+OU = User
+CN = Usuario-1
+
+[ v3_ca ]
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+basicConstraints = critical,CA:TRUE,pathlen:0
+keyUsage = critical,keyCertSign,cRLSign
