@@ -8,7 +8,9 @@
 **Author:**
 - Rosa Reyes
 
-This project implements an application that enables encryption and decryption of messages using symmetric encryption (AES-GCM) and asymmetric encryption (RSA). It also incorporates the use of digital signatures, certificates, and a Public Key Infrastructure (PKI) for enhanced security and authenticity. Additionally, the application includes a web interface for user registration and authentication, as well as the exchange of encrypted messages.
+This project implements an application that enables encryption and decryption of messages using symmetric encryption (AES-GCM) and asymmetric encryption (RSA). It also incorporates the use of digital signatures, certificates, and a Public Key Infrastructure (PKI) for enhanced security and authenticity. 
+
+Additionally, the application includes a web interface for user registration and authentication, as well as the exchange of encrypted messages.
 
 ## Folder Structure
 
@@ -88,6 +90,20 @@ Open your web browser and go to `http://localhost:5001/` to view the user interf
 - **Message encryption and decryption**: Using AES-GCM for message encryption and RSA for encrypting symmetric keys.
 - **User registration and authentication**: Securely stores users in the SQLite database, using `Scrypt` to derive and store password hashes.
 - **Digital signatures and certificates**: Use of digital signatures and certificates generated with OpenSSL.
+
+## Terminal Logs
+The terminal provides detailed logs of the cryptography processes, such as encryption, decryption, and key exchanges. Below are sample screenshots:
+
+**1. Terminal Logs: Sender process**
+<p align="center">
+  <img src='https://github.com/user-attachments/assets/bceccab6-e266-42bb-b7bb-b386513e5680' width='800px'>
+</p>
+
+**2. Terminal Logs: Receiver process**
+<p align="center">
+  <img src='https://github.com/user-attachments/assets/68ca6731-7b89-4755-9913-a90238c6aef2' width='800px'>
+</p>
+
 
 ## Notes
 
