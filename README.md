@@ -1,5 +1,9 @@
-
-# Practice 1 - Cryptography
+<p align="center">
+  <a href="https://edash-project.netlify.app/">
+    <img src='https://github.com/user-attachments/assets/79654e6e-2146-4cb0-809b-3e7ce78533c6' width='600px'>
+    <h1 align="center">Cryptography Practice - Chat App</h1>
+  </a>
+</p>
 
 **Author:**
 - Rosa Reyes
